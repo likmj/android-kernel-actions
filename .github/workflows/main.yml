@@ -28,12 +28,16 @@ jobs:
 
         path: zipper
         
-    - name: Install dependencies
+    - name: sync source
 
       run: |
 
         sudo apt install repo -y
-
+        mkdir android-kernel && cd android-kernel
+        repo init -u https://android.googlesource.com/kernel/manifest -b android-msm-crosshatch-4.9-android12
+        repo sync
+      
+      
     - name: Android kernel build
 
       uses: lemniskett/android-kernel-actions@master
