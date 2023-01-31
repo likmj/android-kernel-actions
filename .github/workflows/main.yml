@@ -36,28 +36,8 @@ jobs:
         mkdir android-kernel && cd android-kernel
         repo init -u https://android.googlesource.com/kernel/manifest -b android-msm-crosshatch-4.9-android12
         repo sync
+        build/build.sh
       
-      
-    - name: Android kernel build
-
-      uses: lemniskett/android-kernel-actions@master
-
-      id: build
-
-      env:
-
-        NAME: Dark-Ages-Último
-
-      with:
-
-        arch: arm64
-
-        compiler: gcc/10
-
-        defconfig: vince_defconfig
-
-        image: Image.gz-dtb
-
     - name: Release build
 
       uses: appleboy/telegram-action@master
