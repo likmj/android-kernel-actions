@@ -34,11 +34,10 @@ jobs:
 
         sudo apt install git
         git clone https://github.com/LineageOS/android_kernel_google_msm-4.9
-        cd *4.9
+        cd android_kernel_google_msm-4.9
         
+    - name: Android kernel build
 
-
-- name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
       id: build
       env:
