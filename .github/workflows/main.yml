@@ -34,7 +34,24 @@ jobs:
 
         sudo apt install git
         git clone https://github.com/LineageOS/android_kernel_google_msm-4.9
+        cd *4.9
         
+
+
+- name: Android kernel build
+      uses: lemniskett/android-kernel-actions@master
+      id: build
+      env:
+        NAME: Dark-Ages-Último
+      with:
+        arch: arm64
+        compiler: aosp-clang/master/clang-r416183b, aosp-clang/android11-release/clang-r365631c/binutils
+        defconfig: sdm845_defconfig
+        image: Image.gz-dtb
+
+
+
+
     - name: Release build
 
       uses: appleboy/telegram-action@master
