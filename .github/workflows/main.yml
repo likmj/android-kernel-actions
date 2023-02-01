@@ -44,7 +44,7 @@ jobs:
         NAME: Dark-Ages-Último
       with:
         arch: arm64
-        compiler: aosp-clang/master/clang-r416183b, aosp-clang/android11-release/clang-r365631c/binutils
+        compiler: aosp-clang/master/clang-r416183b
         defconfig: sdm845_defconfig
         image: Image.gz-dtb
 
