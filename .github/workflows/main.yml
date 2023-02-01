@@ -32,12 +32,9 @@ jobs:
 
       run: |
 
-        sudo apt install repo -y
-        mkdir android-kernel && cd android-kernel
-        repo init -u https://android.googlesource.com/kernel/manifest -b android-msm-crosshatch-4.9-android12
-        repo sync
-        build/build.sh
-      
+        sudo apt install git
+        git clone https://github.com/LineageOS/android_kernel_google_msm-4.9
+        
     - name: Release build
 
       uses: appleboy/telegram-action@master
