@@ -44,7 +44,7 @@ jobs:
         NAME: Dark-Ages-Último
       with:
         arch: arm64
-        compiler: aosp-clang/master/clang-r416183b
+        compiler: clang/11
         defconfig: sdm845_defconfig
         image: Image.gz-dtb
 
