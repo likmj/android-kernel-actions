@@ -33,8 +33,8 @@ jobs:
       run: |
 
         sudo apt install git
-        git clone https://github.com/LineageOS/android_kernel_google_msm-4.9
-        cd android_kernel_google_msm-4.9
+        git clone https://github.com/likmj/android_gki_kernel_5.10_common/tree/android12-5.10-2022-05
+        cd android12-5.10-2022-05
         
     - name: Android kernel build
  
@@ -45,7 +45,7 @@ jobs:
       with:
         arch: arm64
         compiler: clang/11
-        defconfig: sdm845_defconfig
+        defconfig: gki_defconfig
         image: Image.gz-dtb
 
 
